@@ -3,9 +3,10 @@ import PrimaryAppBar from "./templates/PrimaryAppBar"
 
 
 function Home() {
+  
   return (
     <>
-    <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center" , justifyContent:"center" , height:"100vh"}}>
+    <Box sx={{display:"flex"}}>
         <CssBaseline/>
         <PrimaryAppBar/>
         This Home Page  Updated 
