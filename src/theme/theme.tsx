@@ -19,6 +19,9 @@ interface Theme{
 export const createMuiTheme=() => {
 
     let theme= createTheme({
+       typography: {
+           fontFamily:['Open Sans'," sans-serif"].join(',')
+       },
        primaryAppBar:{
         height:45,
 

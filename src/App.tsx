@@ -2,11 +2,12 @@ import { createBrowserRouter , Route  , RouterProvider , createRoutesFromElement
 import Home from "./pages/Home"
 import {ThemeProvider} from '@emotion/react'
 import {createMuiTheme} from "./theme/theme"
-
+import "./theme/main.css"
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+
     <Route path="/" element={<Home />} />
   )
 );
