@@ -1,5 +1,5 @@
 import AppBar from '@mui/material/AppBar'
-import { Drawer, fabClasses, Toolbar, Typography, useMediaQuery } from '@mui/material'
+import { Drawer, Toolbar, Typography, useMediaQuery } from '@mui/material'
 import {useTheme} from '@mui/material/styles'
 import { Link } from 'react-router-dom';
 import {Box } from "@mui/material"
@@ -57,9 +57,9 @@ function PrimaryAppBar() {
           </IconButton>
         </Box>
         <Drawer anchor='left' open={sideMenu} onClose={toggleDrawer(false)}>
-          {[...Array(100)].map((_,i)=>(
+          {[...Array(10)].map((_,i)=>(
             
-            <Typography key={i} paragrah>
+            <Typography key={i} component="p">
               {i+1}
             </Typography>
           ))}

@@ -1,5 +1,6 @@
 import {Box , CssBaseline} from "@mui/material"
 import PrimaryAppBar from "./templates/PrimaryAppBar"
+import PrimaryDraw from "./templates/PrimaryDraw"
 
 
 function Home() {
@@ -9,7 +10,9 @@ function Home() {
     <Box sx={{display:"flex"}}>
         <CssBaseline/>
         <PrimaryAppBar/>
-        This Home Page  Updated 
+        <PrimaryDraw>
+        </PrimaryDraw>
+       
     </Box>
     </>
   )

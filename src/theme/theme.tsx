@@ -6,12 +6,23 @@ interface Theme{
     primaryAppBar: {
        height:number
     };
+    primaryDrawer: {
+       width:number,
+       closed:number
+
+    };
 
 }
   interface ThemeOptions{
     primaryAppBar:{
         height:number
+
     }
+     primaryDrawer: {
+       width:number
+       closed:number
+
+    };
 
 }
 
@@ -26,6 +37,12 @@ export const createMuiTheme=() => {
         height:45,
 
        }, 
+        primaryDrawer: {
+       width:250,
+       closed:70
+
+       },
+       
        components:{
         MuiAppBar:{
             defaultProps:{
