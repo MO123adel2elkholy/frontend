@@ -12,6 +12,11 @@ interface Theme{
 
     };
 
+     scondaryDrawer: {
+       width:number,
+
+    };
+
 }
   interface ThemeOptions{
     primaryAppBar:{
@@ -21,6 +26,10 @@ interface Theme{
      primaryDrawer: {
        width:number
        closed:number
+
+    };
+     scondaryDrawer: {
+       width:number,
 
     };
 
@@ -38,10 +47,14 @@ export const createMuiTheme=() => {
 
        }, 
         primaryDrawer: {
-       width:250,
+       width:150,
        closed:70
 
        },
+        scondaryDrawer: {
+       width:200,
+
+    },
        
        components:{
         MuiAppBar:{
