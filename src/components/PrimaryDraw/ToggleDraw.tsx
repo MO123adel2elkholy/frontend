@@ -1,7 +1,17 @@
 import ChevronLeft from '@mui/icons-material/ChevronLeft'
+import ChevronRight from '@mui/icons-material/ChevronRight'
 import { Box, IconButton } from '@mui/material'
+import React from 'react'
 
-const ToggleDrawer = () => {
+
+type Props = {
+  open: boolean
+  hanadelDrawerOpen: () => void
+  hanadelDrawerclosed: () => void
+
+}
+
+const ToggleDrawer: React.FC<Props>= ({ open, hanadelDrawerOpen, hanadelDrawerclosed }) => {
   return (
     <Box
       sx={{
@@ -11,8 +21,8 @@ const ToggleDrawer = () => {
         alignItems: 'center',
       }}
     >
-      <IconButton>
-        <ChevronLeft />
+      <IconButton onClick={open ? hanadelDrawerclosed : hanadelDrawerOpen}>
+            {open? <ChevronLeft />:<ChevronRight/>}
       </IconButton>
     </Box>
   )
