@@ -43,12 +43,12 @@ export const createMuiTheme=() => {
            fontFamily:['Open Sans'," sans-serif"].join(',')
        },
        primaryAppBar:{
-        height:45,
+        height:40,
 
        }, 
         primaryDrawer: {
        width:150,
-       closed:70
+       closed:30
 
        },
         scondaryDrawer: {

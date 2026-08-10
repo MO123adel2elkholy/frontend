@@ -57,7 +57,7 @@ function PrimaryAppBar() {
           </IconButton>
         </Box>
         <Drawer anchor='left' open={sideMenu} onClose={toggleDrawer(false)}>
-          {[...Array(100)].map((_,i)=>(
+          {[...Array(40)].map((_,i)=>(
             
             <Typography key={i} component="p">
               {i+1}
