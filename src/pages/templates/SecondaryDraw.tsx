@@ -1,11 +1,25 @@
-import { Box, Typography } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
+import { Box, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import axios from 'axios';
+
+
 
 const SecondaryDraw = () => {
   const theme = useTheme()
+  const server_url='http://127.0.0.1:8000/api/server/select/'
 
   const appBarHeight = theme.primaryAppBar?.height 
   const drawerWidth = theme.scondaryDrawer?.width 
+  axios
+      .get(server_url)
+      .then((response)=>{
+        console.log(response.data)
+      })
+      .catch((errors)=>{
+        console.log(`your erros is ${errors}`)
+      })
+      
+
 
   return (
     <Box
