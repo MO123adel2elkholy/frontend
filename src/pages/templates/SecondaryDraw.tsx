@@ -1,6 +1,8 @@
-import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import axios from 'axios';
+import { Box, Typography } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import api from '../../helpers/JetInterceptor'
 
 
 
@@ -10,14 +12,26 @@ const SecondaryDraw = () => {
 
   const appBarHeight = theme.primaryAppBar?.height 
   const drawerWidth = theme.scondaryDrawer?.width 
-  axios
-      .get(server_url)
-      .then((response)=>{
-        console.log(response.data)
+
+  // axios
+  //     .get(server_url)
+  //     .then((response)=>{
+  //       // console.log(response.data)
+  //     })
+  //     .catch((errors)=>{
+  //       console.log(`your erros is ${errors}`)
+  //     })
+
+      const [data, setData] = useState([])
+
+    useEffect(() => {
+    api.get('/server/select/')
+      .then((res) => {setData(res.data)
+              console.log(res.data)
+      
       })
-      .catch((errors)=>{
-        console.log(`your erros is ${errors}`)
-      })
+      .catch((err) => console.error(err))
+        }, [])
       
 
 
